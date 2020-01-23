@@ -5,6 +5,7 @@ metadata:
   name: poc-mysql-operator
 rules:
 
+# # This, when uncommented fixes the problem
 # - apiGroups:
 #   - ""
 #   resources:

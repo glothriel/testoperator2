@@ -40,8 +40,9 @@ spec:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
               value: "poc-mysql-operator"
-            - name: WATCH_NAMESPACE
-              value: "{{ namespace }}"
+            # # This, when uncommented fixes the problem
+            # - name: WATCH_NAMESPACE
+            #   value: "{{ namespace }}"
             - name: OPERATOR_CREDENTIALS_SECRET
               value: "mysql-admin-secret"
             - name: ANSIBLE_GATHERING
