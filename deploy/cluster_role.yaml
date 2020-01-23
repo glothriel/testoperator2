@@ -1,0 +1,29 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: poc-mysql-operator
+rules:
+
+# - apiGroups:
+#   - ""
+#   resources:
+#   - secrets
+#   verbs:
+#   - '*'
+  
+- apiGroups:
+  - apps
+  resourceNames:
+  - poc-mysql-operator
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update
+
+- apiGroups:
+  - mysql.glothriel.org
+  resources:
+  - '*'
+  verbs:
+  - '*'

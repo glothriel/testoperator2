@@ -1,0 +1,4 @@
+apiVersion: mysql.glothriel.org/v1alpha1
+kind: MySQLDatabase
+metadata:
+  name: example-mysqldb

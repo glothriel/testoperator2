@@ -1,0 +1,8 @@
+sudo: required
+services: docker
+language: python
+install:
+  - pip3 install -r requirements.txt
+script:
+  - gitlint
+  - molecule test -s test-local

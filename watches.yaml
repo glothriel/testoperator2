@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: mysql.glothriel.org
+  kind: MySQLDatabase
+  playbook: /opt/ansible/operator.yml

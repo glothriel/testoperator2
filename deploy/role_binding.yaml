@@ -1,0 +1,14 @@
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: poc-mysql-operator
+  namespace: "{{ namespace }}"
+subjects:
+- kind: ServiceAccount
+  namespace: "{{ namespace }}"
+  name: poc-mysql-operator
+roleRef:
+  kind: Role
+  name: poc-mysql-operator
+  apiGroup: rbac.authorization.k8s.io
